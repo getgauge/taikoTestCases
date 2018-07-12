@@ -6,10 +6,9 @@ const assert = require("assert");
         await openBrowser();
         await goto("https://gauge.org/index.html");
         await click(link("Documentation"),{waitForNavigation:true});
-        assert.equal(await title(),"Gauge Documentation — Gauge 1.0.0 documentation");
-        await focus(inputField("id","search"));
-        await write("Custom")
-        await click("Taking Custom Screenshots")
+        await click("Write Specifications",{waitForNavigation:true})
+        await scrollTo(link("Refactoring"))
+
         await closeBrowser();
     } catch (e) {
         console.error(e);
