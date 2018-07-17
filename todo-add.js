@@ -5,10 +5,10 @@ const { browser, openBrowser, goto, link, click, listItem,checkBox } = require('
         await openBrowser();
         await goto("http://todomvc.com/examples/react/#/");
         await write("something");
-        await press("Enter");        
+        await press("Enter");  
+        await waitFor(1000);
         await click(checkBox('class','toggle',near('something')))
         await hover(checkBox('class','toggle'))
-        await waitFor(5000);
         await closeBrowser();
     } catch (e) {
         console.error(e);

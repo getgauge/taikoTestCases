@@ -9,9 +9,9 @@ const { browser, openBrowser, goto, link, click, listItem } = require('taiko');
 
         await press("Enter");        
         await click(checkBox('class','toggle',near('to remove')))
-        await hover(checkBox('class','toggle'))
+        await hover(checkBox('class','toggle',near('to remove')))
 
-        await click(button('class','destroy'))
+        await click(button('class','destroy',near('to remove')))
         await waitFor(5000);
         await reload("http://todomvc.com/examples/react/#/",{waitForNavigation:true});
 
