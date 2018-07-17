@@ -9,8 +9,6 @@ const { browser, openBrowser, goto, click, link, listItem, title } = require('ta
     } catch (e) {
         console.error(e);
     } finally {
-        if (browser()) {
-            closeBrowser();
-        }
+        closeBrowser();
     }
 })();
