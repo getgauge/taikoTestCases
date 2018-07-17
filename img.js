@@ -6,8 +6,9 @@ const assert = require("assert");
         await openBrowser();
         await goto("https://gauge.org/index.html");
         await click(link("Blog"),{waitForNavigation:true});
+
         await click(image(above(text('Zabil Maliackal'))))
-        await waitFor(5000);
+        await assert.ok(text('Why we built Gauge').exists())
 
         await closeBrowser();
     } catch (e) {
@@ -15,6 +16,3 @@ const assert = require("assert");
     } finally {
     }
 })();
-
-
-//Zabil Maliackal

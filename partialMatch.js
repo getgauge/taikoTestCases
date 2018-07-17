@@ -6,7 +6,7 @@ const assert = require("assert");
         await openBrowser();
         await goto("http://google.com");
         await click(contains('Gmai'))
-        assert.ok(await text('Meet your new inbox').exists());
+        assert.ok(await contains('Meet your').exists());
     } catch (e) {
         console.error(e);
     } finally {

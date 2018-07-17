@@ -9,7 +9,8 @@ const assert = require("assert");
         assert.equal(await title(),"Gauge Documentation — Gauge 1.0.0 documentation");
         await focus(inputField("id","search"));
         await write("Custom")
-        await click("Taking Custom Screenshots")
+        await click(contains("Taking"))
+        //Custom Screenshots
         await closeBrowser();
     } catch (e) {
         console.error(e);
