@@ -7,7 +7,7 @@ const { browser, openBrowser, goto, click } = require('taiko');
         await click("Bengaluru");
         await write('NCR', into(await inputField("placeholder","Search for your city")));
         await click("NCR",{waitForNavigation:true});
-        await click("View",{waitForNavigation:true});
+        await click("View All",{waitForNavigation:true});
         await closeBrowser();
     } catch (e) {
         console.error(e);
