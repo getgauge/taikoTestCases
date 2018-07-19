@@ -5,7 +5,7 @@ const assert = require("assert");
     try {
         await openBrowser();
         await goto("https://gauge.org/index.html");
-        await click(link("Blog"),{waitForNavigation:true});
+        await click(link("Blog"));
 
         await click(image(above(text('Zabil Maliackal'))))
         await assert.ok(text('Why we built Gauge').exists())

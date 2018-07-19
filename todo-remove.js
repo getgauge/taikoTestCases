@@ -14,7 +14,7 @@ const { browser, openBrowser, goto, link, click, listItem } = require('taiko');
 
         await click(button('class','destroy',near('to remove')))
         await waitFor(5000);
-        await reload("http://todomvc.com/examples/react/#/",{waitForNavigation:true});
+        await reload("http://todomvc.com/examples/react/#/");
 
         await closeBrowser();
     } catch (e) {

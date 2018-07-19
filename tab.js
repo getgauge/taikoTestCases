@@ -5,10 +5,10 @@ const assert = require("assert");
     try {
         await openBrowser();
         await goto("https://gauge.org/index.html");
-        await click(link("Documentation"),{waitForNavigation:true});
-        await click("Write Specifications",{waitForNavigation:true})
+        await click(link("Documentation"));
+        await click("Write Specifications")
         await click("IntelliJ Idea")
-        await click("Gauge plugin for IntelliJ IDEA",{waitForNavigation:true})
+        await click("Gauge plugin for IntelliJ IDEA")
         await closeBrowser();
     } catch (e) {
         console.error(e);

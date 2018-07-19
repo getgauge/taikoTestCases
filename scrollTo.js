@@ -5,8 +5,8 @@ const assert = require("assert");
     try {
         await openBrowser();
         await goto("https://gauge.org/index.html");
-        await click(link("Documentation"),{waitForNavigation:true});
-        await click("Write Specifications",{waitForNavigation:true})
+        await click(link("Documentation"));
+        await click("Write Specifications")
         await scrollTo(link("Refactoring"))
         await scrollUp("Example")
         await waitFor(5000);

@@ -5,11 +5,11 @@ const assert = require('assert');
     try {
         await openBrowser();
         await goto("google.com");
-        await click("I'm Feeling Lucky",{waitForNavigation:true});
+        await click("I'm Feeling Lucky");
         await click(link("About"));
         await comboBox("id","lang-chooser").select("‪हिन्दी‬");
         assert.equal("hi",await comboBox("id","lang-chooser").value());
-        await click("Doodles संग्रह",{waitForNavigation:true});
+        await click("Doodles संग्रह");
 
         closeBrowser();
     } catch (e) {

@@ -5,7 +5,7 @@ const assert = require("assert");
     try {
         await openBrowser();
         await goto("https://gauge.org/index.html");
-        await click(link("Documentation"),{waitForNavigation:true});
+        await click(link("Documentation"));
         assert.equal(await title(),"Gauge Documentation — Gauge 1.0.0 documentation");
         await focus(inputField("id","search"));
         await write("Custom")

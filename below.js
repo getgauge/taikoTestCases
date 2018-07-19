@@ -5,7 +5,7 @@ const assert = require("assert");
     try {
         await openBrowser();
         await goto("https://gauge.org/index.html");
-        await click(link("Gauge Commmands",below(link("Roadmap"))),{waitForNavigation:true});
+        await click(link("Gauge Commmands",below(link("Roadmap"))));
         await closeBrowser();
     } catch (e) {
         console.error(e);

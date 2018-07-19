@@ -22,7 +22,7 @@ const assert = require("assert");
         assert.ok(await checkBox('class','toggle',near('flow')).exists())
 
         await click(link("Clear completed"));
-        await reload("http://todomvc.com/examples/react/#/",{waitForNavigation:true});
+        await reload("http://todomvc.com/examples/react/#/");
 
         await closeBrowser();
     } catch (e) {

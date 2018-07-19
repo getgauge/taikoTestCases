@@ -6,7 +6,7 @@ const assert = require("assert");
         await openBrowser();
         await goto("https://gauge.org/index.html");
         assert.ok(text("class","github_star").exists())
-        await click(link(toRightOf(text("class","github_star"))),{waitForNavigation:true});
+        await click(link(toRightOf(text("class","github_star"))));
                 // assert.ok(await comboBox(toRightOf(image("id","lang-icon"))).exists())
         // await comboBox(toRightOf(image("id","lang-icon"))).select("‪हिन्दी‬");
 
