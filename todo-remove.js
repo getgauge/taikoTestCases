@@ -2,12 +2,13 @@ const { browser, openBrowser, goto, link, click, listItem } = require('taiko');
 
 (async () => {
     try {
-        await openBrowser();
+        await openBrowser({headless:false});
         await goto("http://todomvc.com/examples/react/#/");
 
         await write("to remove");
 
-        await press("Enter");        
+        await press("Enter");    
+        await waitFor(1000);
         await click(checkBox('class','toggle',near('to remove')))
         await hover(checkBox('class','toggle',near('to remove')))
 

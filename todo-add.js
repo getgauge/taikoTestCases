@@ -2,7 +2,7 @@ const { browser, openBrowser, goto, link, click, listItem,checkBox } = require('
 
 (async () => {
     try {
-        await openBrowser();
+        await openBrowser({headless:false});
         await goto("http://todomvc.com/examples/react/#/");
         await write("something");
         await press("Enter");  

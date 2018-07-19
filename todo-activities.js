@@ -3,7 +3,7 @@ const assert = require("assert");
 
 (async () => {
     try {
-        await openBrowser();
+        await openBrowser({headless:false});
         await goto("http://todomvc.com/examples/react/#/");
         await waitFor(1000);
 
