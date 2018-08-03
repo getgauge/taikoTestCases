@@ -2,7 +2,7 @@ const { browser, openBrowser, goto, link, click, listItem } = require('taiko');
 
 (async () => {
     try {
-        await openBrowser({headless:false});
+        await openBrowser();
         await goto("http://todomvc.com/examples/react/#/");
 
         await write("to remove");

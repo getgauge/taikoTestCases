@@ -4,9 +4,11 @@ const { browser, openBrowser, goto, click,link,image } = require('taiko');
     try {
         await openBrowser({headless:false});
         await goto("https://in.bookmyshow.com/bengaluru");
-        // await click("Bengaluru");
-        // await write('NCR', into(await inputField("placeholder","Search for your city")));
-        // await click("NCR");
+
+        await click("Bengaluru");
+        await write('NCR', into(await inputField({"placeholder":"Search for your city"})));
+        await click("NCR");
+        await click("View All");
         await click("View All");
         await click(link("English"))
         await click(image("Hotel Transylvania 3: A Monster Vacation"))

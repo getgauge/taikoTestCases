@@ -1,16 +1,12 @@
 const { browser, openBrowser, goto, click,comboBox } = require('taiko');
-const assert = require("assert");
-
-(async () => {
-    try {
-        await openBrowser({headless:false});
+    (async () => {
+        try {
+        await openBrowser();
         await goto("google.com");
         await click("I'm Feeling Lucky");
-        await click(link("About"));
-        assert.ok(await comboBox(toRightOf(image("id","lang-icon"))).exists())
-        await comboBox(toRightOf(image("id","lang-icon"))).select("hi");
-        await waitFor(5000)
-        await click("Doodles Archive");
+        await click("About");
+        await comboBox(near(inputField({"placeholder":"Search Doodles"}))).select("‪हिन्दी‬");
+        await click("Doodles संग्रह");
         await closeBrowser();
     } catch (e) {
         console.error(e);
