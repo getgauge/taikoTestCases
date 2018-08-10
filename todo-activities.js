@@ -5,9 +5,7 @@ const assert = require("assert");
     try {
         await openBrowser({headless:false});
         await goto("http://todomvc.com/examples/react/#/");
-
         await write("flow");
-
         await press("Enter");
 
         await click(link("Active"));

@@ -7,7 +7,7 @@ const assert = require('assert');
         await goto("google.com");
         await click("I'm Feeling Lucky");
         await click(link("About"));
-        await comboBox("id","lang-chooser").select("‪हिन्दी‬");
+        await comboBox({"id":"lang-chooser"}).select("‪हिन्दी‬");
         assert.equal("hi",await comboBox("id","lang-chooser").value());
         await click("Doodles संग्रह");
 
@@ -17,12 +17,3 @@ const assert = require('assert');
     } finally {
     }
 })();
-// (async () => {
-//     await openBrowser();
-//     await goto("google.com");
-//     await click("I'm Feeling Lucky");
-//     await click("About");
-//     await comboBox("id","lang-chooser").select("‪हिन्दी‬");
-//     assert.equal("hi",await comboBox("id","lang-chooser").value());
-//     await closeBrowser();
-// })();
