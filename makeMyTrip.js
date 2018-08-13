@@ -33,3 +33,22 @@ const { openBrowser, goto, below, inputField, focus, write, press, click } = req
         // await click(radioButton({"id":"cbn_none"},below(text(contains("Fri, 24 Aug`18")))))
         // await click(link("Duration",below("Fri, 24 Aug`18")))
         // await click(radioButton(link("Duration",below("Fri, 24 Aug`18"))))
+
+//         const { openBrowser, goto, text, below, inputField, into, write, press, near, above, hover, click, link } = require('taiko');
+
+// (async () => {
+//     try {
+//         await openBrowser({headless:false});
+//         await goto("makeMytrip.com");
+//         await waitFor("5000")
+// //        await click(checkBox(toLeftOf("My dates are flexible [+/- 3 days]")))
+
+//         await hover(inputField({"id":"hp-widget__depart"}));
+//         await click(inputField({"id":"hp-widget__depart"}));
+//         await click(link("28",below(text("August"))));
+//     } catch (e) {
+//         console.error(e);
+//     } finally {
+//         closeBrowser();
+//     }
+// })();
