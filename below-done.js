@@ -3,9 +3,9 @@ const assert = require("assert");
 
 (async () => {
     try {
-        await openBrowser();
+        await openBrowser({headless:false});
         await goto("https://gauge.org/index.html");
-        await click(link("Gauge Commmands",below(link("Roadmap"))));
+        await click(link("Gauge Commmands",below(text("Explore"))));
         await closeBrowser();
     } catch (e) {
         console.error(e);
