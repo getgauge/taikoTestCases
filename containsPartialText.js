@@ -11,9 +11,9 @@ const assert = require("assert");
         await write("Custom")
         await click(contains("Taking"))
         //Custom Screenshots
-        await closeBrowser();
     } catch (e) {
         console.error(e);
     } finally {
+        await closeBrowser();
     }
 })();

@@ -2,7 +2,7 @@ const { openBrowser, goto, write, press, link, click, near, checkBox, button, re
 
 (async () => {
     try {
-        await openBrowser({headless:false});
+        await openBrowser();
         await goto("http://todomvc.com/examples/react/#/");
         await write("something");
         await press("Enter");

@@ -3,17 +3,16 @@ const assert = require('assert');
 
 (async () => {
     try {
-        await openBrowser();
+        await openBrowser({headless:false});
         await goto("google.com");
         await click("I'm Feeling Lucky");
         await click(link("About"));
         await comboBox({"id":"lang-chooser"}).select("‪हिन्दी‬");
-        assert.equal("hi",await comboBox("id","lang-chooser").value());
+//        assert.equal("hi",await comboBox({"id":"lang-chooser"}).value());
         await click("Doodles संग्रह");
-
-        closeBrowser();
     } catch (e) {
         console.error(e);
     } finally {
+        closeBrowser();
     }
 })();
