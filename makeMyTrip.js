@@ -9,9 +9,9 @@ const { openBrowser, goto, below, inputField, focus, write, press, click } = req
         await press("Enter");
         await write("Goa");
         await press("Enter");
-        await click(link("20",below(text("October"))));
+        await click("20",below(text("June")));
         await focus(inputField(below("Return")))
-        await click(link("24",below(text("October"))));
+        await click("24",below(text("June")));
 
         await click(button("Search"))
         console.log(await text(contains("ZERO Cancellation |  Cancel your ticket for Free. Buy Zero Cancellation @ only")).exists())
